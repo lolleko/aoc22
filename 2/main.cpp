@@ -22,7 +22,6 @@ uint64_t part1And2(std::ifstream &file, const lookup_array& lookup) {
         // new line (check ahead at most 2 in case of CRLF)
         file.ignore(2, '\n');
 
-        // TODO invert indices also requires inverting part 1 lookup
         sum += lookup[opponent][me_or_epected_result];
     }
 
