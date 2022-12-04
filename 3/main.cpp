@@ -3,8 +3,6 @@
 #include <iostream>
 #include <array>
 
-using lookup_array = std::array<std::array<uint64_t, 3>, 3>;
-
 uint64_t char_to_prio(const char c)
 {
     return c > 'Z' ? c - 'a' + 1 : c - 'A' + 27;
@@ -14,6 +12,7 @@ constexpr uint64_t FIRST_BIT = 1;
 
 uint64_t encode_string(const std::string_view &str)
 {
+
     uint64_t result = 0;
     for (auto &&c : str)
     {
